@@ -29,3 +29,7 @@ server:
   error:
     whitelabel:
       enabled: false
+
+elasticsearch:
+  host: docker_host
+  port: 9200
