@@ -12,12 +12,12 @@ spring:
   kafka:
     consumer:
       group-id: elasticsearch-group
-    bootstrap-servers: docker_host:9092
+    bootstrap-servers: ubuntu-server:9092
   main:
     allow-bean-definition-overriding: true
   datasource:
     driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
-    url: jdbc:log4jdbc:mysql://docker_host:3306/appdb?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    url: jdbc:log4jdbc:mysql://ubuntu-server:3306/appdb?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
     username: ENC(TjWinjUKrOPY/tBd3lKezQ==)
     password: ENC(69KbjnpfEVS9QUov4JTBEA==)
     tomcat:
@@ -42,5 +42,5 @@ server:
       enabled: false
 
 elasticsearch:
-  host: docker_host
+  host: ubuntu-server
   port: 9200
