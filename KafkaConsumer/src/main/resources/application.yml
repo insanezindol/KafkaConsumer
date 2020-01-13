@@ -12,6 +12,10 @@ spring:
   kafka:
     consumer:
       group-id: elasticsearch-group
+      # 카프카에서 초기 오프셋이 없거나 현재 오프셋이 더 이상 존재하지 않은 경우에 다음 옵션으로 리셋
+      # earliest : 가장 초기의 오프셋값으로 설정
+      # latest : 가장 마지막의 오프셋값으로 설정
+      auto-offset-reset: latest
     bootstrap-servers: ubuntu-server:9092
   main:
     allow-bean-definition-overriding: true

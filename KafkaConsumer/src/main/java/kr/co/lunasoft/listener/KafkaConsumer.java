@@ -39,5 +39,15 @@ public class KafkaConsumer {
 		int resultCnt = mysqlService.addNotice(noticeInfo);
 		log.info("[CONSUMER] [mysql-call] noticeInfo = '{}' , '{}'", noticeInfo, resultCnt);
 	}
+	
+	@KafkaListener(topics = "test")
+	public void receiveTestTopic(String payload) {
+		log.info("[CONSUMER] [TEST] message = '{}'", payload);
+	}
+	
+	@KafkaListener(topics = "dean")
+	public void receiveDeanTopic(String payload) {
+		log.info("[CONSUMER] [DEAN] message = '{}'", payload);
+	}
 
 }
