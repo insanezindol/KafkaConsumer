@@ -51,3 +51,9 @@ server:
 elasticsearch:
   host: ubuntu-server
   port: 9200
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
