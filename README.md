@@ -150,7 +150,3 @@ Elasticsearch 클러스터가 설정되어 있어야 하며, `lunasoft-message` 
 ## 모니터링
 
 Spring Boot Actuator를 통한 애플리케이션 상태 모니터링 지원
-
-## 라이센스
-
-이 프로젝트의 라이센스 정보는 별도로 명시되지 않았습니다.
